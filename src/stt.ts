@@ -118,7 +118,12 @@ export class SttServer {
     throw new Error("timeout esperando o parakeet-server subir")
   }
 
-  private scheduleIdleUnload(): void {
+  /**
+   * (Re)agenda a descarga do modelo após o período ocioso. Público porque o
+   * pré-aquecimento (início da gravação) também precisa agendar, mesmo que a
+   * gravação seja cancelada e nenhuma transcrição aconteça.
+   */
+  scheduleIdleUnload(): void {
     if (this.idleTimer) clearTimeout(this.idleTimer)
     this.idleTimer = setTimeout(() => {
       if (this.owned && this.child) {

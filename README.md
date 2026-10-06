@@ -14,7 +14,9 @@ favorite coding agent, except everything runs **offline on your machine**.
 - ⚡ **Fast, fully local**: NVIDIA **Parakeet TDT 0.6B v3** via [parakeet.cpp](https://github.com/mudler/parakeet.cpp)
   (ggml + **Vulkan** — works on AMD, NVIDIA and Intel GPUs)
 - 🗣️ **25 languages**, auto-detected (strong Brazilian Portuguese)
-- 🧠 **On-demand server**: the model loads in ~1.5 s and unloads after 10 idle minutes
+- 🧠 **Zero-wait server**: starting a recording pre-warms the model in the background
+  (~1.5 s cold load), so stopping a recording transcribes almost instantly; it
+  unloads after 10 idle minutes
 - 📤 **Sends as prompt**: raw transcription delivered to the current session
 - 🔌 **Zero cloud**: no API keys, no accounts, no audio leaves your machine
 

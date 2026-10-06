@@ -149,7 +149,7 @@ function Install-PluginFromLocal([string]$sourceRoot) {
     $manifest = @'
 {
   "name": "opencode-voice",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "exports": {

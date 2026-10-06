@@ -1,6 +1,6 @@
 {
   "name": "opencode-voice",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "description": "Voz local (Parakeet v3 / NVIDIA) para o OpenCode V2 TUI: grava no microfone, transcreve com parakeet.cpp (Vulkan) e envia o texto como prompt.",

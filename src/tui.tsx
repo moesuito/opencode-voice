@@ -250,6 +250,19 @@ const plugin = {
       startedAt = Date.now()
       setPhase("recording")
       startElapsedTimer()
+
+      // Pré-aquece o modelo em segundo plano (silencioso): quando o usuário
+      // parar de gravar, o servidor já está pronto e a transcrição é quase
+      // instantânea. Se a gravação for cancelada, o modelo descarrega sozinho
+      // após o período ocioso.
+      void stt
+        .ensure()
+        .then(() => {
+          stt.scheduleIdleUnload()
+          log("voice: model pre-warmed")
+        })
+        .catch((error) => log("voice: model preload failed:", errorMessage(error)))
+
       log("voice: recording started |", device)
     }
 
