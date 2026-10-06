@@ -1,0 +1,30 @@
+opencode-voice
+Copyright 2026 João Alano
+
+This product includes software and model weights developed and licensed by
+third parties:
+
+1. parakeet.cpp — https://github.com/mudler/parakeet.cpp
+   Copyright the LocalAI team (Ettore Di Giacinto, Richard Palethorpe).
+   Licensed under the MIT License.
+   The prebuilt Windows binaries in this repository's Releases are compiled
+   from this project (a local master build with the Vulkan backend).
+
+2. NVIDIA Parakeet TDT 0.6B v3 — speech recognition weights
+   https://huggingface.co/nvidia/parakeet-tdt-0.6b-v3
+   Copyright NVIDIA. Licensed under CC-BY-4.0.
+   Downloaded separately by the installer from Hugging Face; not redistributed
+   in this repository.
+
+3. ggml — https://github.com/ggml-org/ggml
+   Licensed under the MIT License (tensor library used by the runtime).
+
+4. GGUF model conversions — https://huggingface.co/mudler/parakeet-cpp-gguf
+   Conversions of the NVIDIA weights published by the LocalAI team.
+
+5. ffmpeg — https://ffmpeg.org
+   Used for microphone capture (DirectShow). Not bundled; the user installs it
+   separately (LGPL/GPL depending on the build).
+
+The opencode-voice plugin itself is licensed under the Apache License 2.0
+(see LICENSE).
